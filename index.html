@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MG Catalog | โบรชัวร์รถยนต์ MG & Maxus</title>
+<title>MG Catalog | M2 Motorsport Evolution</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Segoe UI', 'Prompt', Tahoma, sans-serif;
-    background: #0a0e1a;
-    color: #fff;
+    font-family: 'Segoe UI', 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f8f9fa;
+    color: #1a1a1a;
     line-height: 1.6;
   }
 
   /* ===== Header ===== */
   header {
-    background: linear-gradient(135deg, #00d4ff 0%, #7b2cbf 100%);
-    padding: 15px 40px;
-    box-shadow: 0 4px 30px rgba(0, 212, 255, 0.3);
+    background: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -34,133 +34,109 @@
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
   }
-  .logo-svg {
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+  .logo-box {
+    width: 60px;
+    height: 60px;
+    background: #000000;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .logo-box svg {
+    width: 40px;
+    height: 40px;
   }
   .logo-text {
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: #0a0e1a;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
+    display: flex;
+    flex-direction: column;
   }
-  .logo-text span { color: #fff; }
+  .logo-main {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  .logo-sub {
+    font-size: 0.75rem;
+    color: #0066cc;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
   .search-box {
     padding: 12px 25px;
-    border: 2px solid rgba(0, 212, 255, 0.5);
+    border: 2px solid #e0e0e0;
     border-radius: 30px;
-    background: rgba(10, 14, 26, 0.8);
-    color: #fff;
+    background: #f8f9fa;
+    color: #1a1a1a;
     font-size: 1rem;
-    width: 300px;
-    backdrop-filter: blur(10px);
+    width: 350px;
     transition: all 0.3s;
   }
-  .search-box::placeholder { color: rgba(255,255,255,0.6); }
+  .search-box::placeholder { color: #999; }
   .search-box:focus { 
     outline: none; 
-    border-color: #00d4ff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    border-color: #0066cc;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(0,102,204,0.1);
   }
 
   /* ===== Hero ===== */
   .hero {
-    background: #0a0e1a;
-    padding: 100px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f4f8 100%);
+    padding: 80px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 500px;
+  }
+  .hero-logo-section {
+    margin-bottom: 30px;
+  }
+  .hero-logo {
+    width: 100px;
+    height: 100px;
+    background: #000000;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  /* 📸 Background Image Placeholder */
-  .hero-bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.4;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero-bg-image.has-image {
-    opacity: 0.6;
-  }
-  .hero-bg-placeholder {
-    text-align: center;
-    padding: 40px;
-    border: 3px dashed rgba(0, 212, 255, 0.4);
-    border-radius: 20px;
-    background: rgba(10, 14, 26, 0.6);
-    backdrop-filter: blur(5px);
-  }
-  .hero-bg-placeholder-icon {
-    width: 120px;
-    height: 120px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(123, 44, 191, 0.2));
-    border: 3px dashed rgba(0, 212, 255, 0.6);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    animation: pulse 2s infinite;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.8; }
+  .hero-logo svg {
+    width: 60px;
+    height: 60px;
   }
-  .hero-bg-placeholder-text {
-    color: rgba(0, 212, 255, 0.8);
-    font-size: 1.3rem;
-    font-weight: 600;
+  .hero-evolution {
+    font-size: 0.85rem;
+    color: #0066cc;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     margin-bottom: 10px;
   }
-  .hero-bg-placeholder-hint {
-    color: rgba(0, 212, 255, 0.5);
-    font-size: 0.9rem;
-  }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
-    z-index: 1;
-  }
-  .hero-content { 
-    position: relative; 
-    z-index: 2;
-    max-width: 900px;
-  }
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     margin-bottom: 15px;
-    background: linear-gradient(90deg, #00d4ff, #7b2cbf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+    color: #1a1a1a;
+    font-weight: 900;
+    letter-spacing: 1px;
   }
-  .hero p { 
-    font-size: 1.2rem; 
-    color: #a0aec0; 
-    max-width: 700px; 
-    margin: 0 auto;
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 10px;
+  }
+  .hero-location {
+    font-size: 0.95rem;
+    color: #999;
+    font-weight: 500;
   }
 
   /* ===== Filter Tabs ===== */
@@ -169,31 +145,31 @@
     margin: 40px auto 20px;
     padding: 0 20px;
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
   }
   .tab {
     padding: 12px 28px;
-    background: rgba(20, 30, 50, 0.8);
-    border: 2px solid rgba(0, 212, 255, 0.3);
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
     border-radius: 30px;
-    color: #a0aec0;
+    color: #666;
     cursor: pointer;
     transition: all 0.3s;
     font-size: 0.95rem;
-    backdrop-filter: blur(10px);
+    font-weight: 500;
   }
   .tab:hover { 
-    border-color: #00d4ff; 
-    color: #fff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    border-color: #0066cc;
+    color: #0066cc;
+    background: #f0f7ff;
   }
   .tab.active {
-    background: linear-gradient(135deg, #00d4ff, #7b2cbf);
-    border-color: transparent;
+    background: #0066cc;
+    border-color: #0066cc;
     color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(0,102,204,0.3);
   }
 
   /* ===== Car Grid ===== */
@@ -203,28 +179,28 @@
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 28px;
+    gap: 25px;
   }
   .car-card {
-    background: linear-gradient(145deg, #0f1729, #1a2332);
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
     border-radius: 16px;
     overflow: hidden;
-    transition: all 0.4s;
+    transition: all 0.3s;
     cursor: pointer;
     position: relative;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
   .car-card:hover {
-    transform: translateY(-10px);
-    border-color: #00d4ff;
-    box-shadow: 0 20px 50px rgba(0, 212, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    border-color: #0066cc;
   }
   
   /* ===== Image Styles ===== */
   .car-image {
     height: 220px;
-    background: linear-gradient(135deg, #1a2332 0%, #0f1729 100%);
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
     position: relative;
     display: flex;
     align-items: center;
@@ -239,7 +215,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 0%, rgba(10, 14, 26, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
   }
   .image-placeholder {
     position: relative;
@@ -251,17 +227,17 @@
     width: 80px;
     height: 80px;
     margin: 0 auto 15px;
-    background: rgba(0, 212, 255, 0.1);
-    border: 2px dashed rgba(0, 212, 255, 0.4);
+    background: rgba(0,102,204,0.1);
+    border: 2px dashed #0066cc;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    color: rgba(0, 212, 255, 0.6);
+    color: #0066cc;
   }
   .image-placeholder-text {
-    color: rgba(0, 212, 255, 0.6);
+    color: #0066cc;
     font-size: 0.9rem;
     font-weight: 500;
   }
@@ -269,14 +245,14 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+    background: #0066cc;
     color: #fff;
     padding: 6px 15px;
     border-radius: 20px;
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: 600;
     z-index: 2;
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 2px 8px rgba(0,102,204,0.3);
   }
   .image-hint {
     position: absolute;
@@ -285,80 +261,78 @@
     right: 0;
     text-align: center;
     font-size: 0.75rem;
-    color: rgba(0, 212, 255, 0.5);
+    color: rgba(255,255,255,0.9);
     z-index: 3;
     padding: 5px;
-    background: rgba(10, 14, 26, 0.7);
+    background: rgba(0,0,0,0.6);
     border-radius: 5px;
     margin: 0 10px;
   }
   .car-info { padding: 22px; }
   .car-name {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-bottom: 5px;
-    color: #fff;
+    color: #1a1a1a;
   }
   .car-trim {
-    color: #00d4ff;
+    color: #0066cc;
     font-size: 0.9rem;
     margin-bottom: 10px;
     font-weight: 600;
   }
   .car-desc {
-    color: #718096;
+    color: #666;
     font-size: 0.9rem;
     margin-bottom: 15px;
     min-height: 42px;
   }
   .car-price {
     font-size: 1.8rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #00d4ff, #7b2cbf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 800;
+    color: #0066cc;
     margin-bottom: 15px;
   }
   .car-specs {
     display: flex;
     gap: 15px;
     padding: 15px 0;
-    border-top: 1px solid rgba(0, 212, 255, 0.2);
-    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
     margin-bottom: 15px;
     flex-wrap: wrap;
   }
   .spec {
     font-size: 0.85rem;
-    color: #718096;
+    color: #666;
   }
   .spec strong {
     display: block;
-    color: #00d4ff;
+    color: #1a1a1a;
     font-size: 1.05rem;
     margin-bottom: 3px;
   }
   .btn-view {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+    background: #0066cc;
     color: #fff;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0,102,204,0.25);
   }
   .btn-view:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 25px rgba(0, 212, 255, 0.5);
+    background: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,102,204,0.35);
   }
 
   /* ===== Modal ===== */
@@ -366,7 +340,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10, 14, 26, 0.98);
+    background: rgba(0,0,0,0.8);
     z-index: 1000;
     padding: 20px;
     animation: fadeIn 0.3s;
@@ -378,40 +352,37 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
-    background: linear-gradient(135deg, #0f1729, #1a2332);
+    background: #ffffff;
     border-radius: 12px 12px 0 0;
-    border-bottom: 3px solid;
-    border-image: linear-gradient(90deg, #00d4ff, #7b2cbf) 1;
+    border-bottom: 3px solid #0066cc;
   }
   .modal-title { 
     font-size: 1.4rem; 
-    font-weight: bold;
-    background: linear-gradient(90deg, #00d4ff, #7b2cbf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 700;
+    color: #1a1a1a;
   }
   .modal-actions { display: flex; gap: 10px; }
   .modal-btn {
     padding: 10px 20px;
-    background: rgba(0, 212, 255, 0.2);
-    color: #fff;
-    border: 1px solid #00d4ff;
+    background: #f0f0f0;
+    color: #1a1a1a;
+    border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.9rem;
+    font-weight: 500;
     transition: all 0.2s;
   }
   .modal-btn:hover { 
-    background: linear-gradient(135deg, #00d4ff, #7b2cbf);
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+    background: #0066cc;
+    color: #fff;
   }
   .modal-btn.close { 
-    background: rgba(239, 68, 68, 0.2);
-    border-color: #ef4444;
+    background: #ff4444;
+    color: #fff;
   }
   .modal-btn.close:hover { 
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    background: #cc0000;
   }
   .modal-body {
     flex: 1;
@@ -427,24 +398,28 @@
 
   /* ===== Footer ===== */
   footer {
-    background: #0a0e1a;
+    background: #ffffff;
     padding: 30px 20px;
     text-align: center;
-    border-top: 1px solid rgba(0, 212, 255, 0.2);
-    color: #4a5568;
+    border-top: 1px solid #e8e8e8;
+    color: #999;
     font-size: 0.9rem;
+  }
+  footer strong {
+    color: #0066cc;
   }
 
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-    .logo-text { font-size: 1.2rem; }
-    .logo-svg { width: 40px; height: 40px; }
+    .hero h1 { font-size: 2rem; }
+    .logo-main { font-size: 1.4rem; }
+    .logo-box { width: 50px; height: 50px; }
+    .logo-box svg { width: 32px; height: 32px; }
     .search-box { width: 100%; }
     .modal-header { flex-direction: column; gap: 12px; }
     .car-grid { grid-template-columns: 1fr; }
-    .hero-bg-placeholder-icon { width: 80px; height: 80px; font-size: 40px; }
-    .hero-bg-placeholder-text { font-size: 1rem; }
+    .hero-logo { width: 80px; height: 80px; }
+    .hero-logo svg { width: 48px; height: 48px; }
   }
 </style>
 </head>
@@ -453,36 +428,36 @@
 <header>
   <div class="header-content">
     <div class="logo-container">
-      <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100 10 L170 30 L190 100 L170 170 L100 190 L30 170 L10 100 L30 30 Z" 
-              fill="none" stroke="#0a0e1a" stroke-width="8"/>
-        <path d="M100 20 L160 37 L177 100 L160 163 L100 180 L40 163 L23 100 L40 37 Z" 
-              fill="none" stroke="#0a0e1a" stroke-width="4"/>
-        <text x="100" y="130" font-family="Arial Black, sans-serif" font-size="80" 
-              font-weight="900" text-anchor="middle" fill="#0a0e1a">MG</text>
-      </svg>
-      <div class="logo-text">M2 <span>MOTORSPORT</span></div>
+      <div class="logo-box">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90" 
+                font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="logo-main">M2 MOTORSPORT</div>
+        <div class="logo-sub">EVOLUTION</div>
+      </div>
     </div>
-    <input type="text" class="search-box" id="searchInput" placeholder=" ค้นหารุ่นรถ...">
+    <input type="text" class="search-box" id="searchInput" placeholder="🔍 ค้นหารุ่นรถ...">
   </div>
 </header>
 
-<!-- 📸 Hero Section พร้อม Placeholder สำหรับรูปภาพฉากหลัง -->
 <section class="hero">
-  <div class="hero-bg-image" id="heroBgImage">
-    <div class="hero-bg-placeholder">
-      <div class="hero-bg-placeholder-icon">🖼️</div>
-      <div class="hero-bg-placeholder-text">รอรูปภาพฉากหลัง</div>
-      <div class="hero-bg-placeholder-hint">วางไฟล์รูปภาพในโฟลเดอร์ images/ และตั้งค่าในโค้ด</div>
+  <div class="hero-logo-section">
+    <div class="hero-logo">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90" 
+              font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
+      </svg>
     </div>
-  </div>
-  <div class="hero-content">
-    <h1>โบรชัวร์รถยนต์ MG & Maxus</h1>
-    <p>รวมแคตตาล็อกและโบรชัวร์รถยนต์ MG ทุกรุ่น ทั้ง EV, Hybrid, SUV, Sedan และ MPV</p>
+    <div class="hero-evolution">EVOLUTION</div>
+    <h1>M2 MOTORSPORT</h1>
+    <div class="hero-subtitle">ระบบบริการลูกค้าออนไลน์</div>
+    <div class="hero-location">MG Ubon Ratchathani</div>
   </div>
 </section>
 
-<!-- ✅ ตัดปุ่ม Pickup ออกแล้ว เหลือแค่ 6 แท็บ -->
 <div class="filter-tabs" id="filterTabs">
   <div class="tab active" data-filter="all">ทั้งหมด</div>
   <div class="tab" data-filter="ev">รถยนต์ไฟฟ้า (EV)</div>
@@ -510,48 +485,12 @@
 </div>
 
 <footer>
-  <p>© 2026 M2 Motorsport Evolution | MG & Maxus Catalog</p>
-  <p style="margin-top: 10px; color: rgba(0, 212, 255, 0.5);">📸 วางไฟล์รูปภาพในโฟลเดอร์ images/ และ PDF ในโฟลเดอร์ pdfs/</p>
+  <p>© 2026 <strong>M2 Motorsport Evolution</strong> | MG Ubon Ratchathani</p>
+  <p style="margin-top: 8px;">ระบบบริการลูกค้าออนไลน์</p>
 </footer>
 
 <script>
-  // ============================================
-  // 📸 วิธีใส่รูปภาพฉากหลัง (Hero Background):
-  // 1. สร้างโฟลเดอร์ "images" ในโปรเจค
-  // 2. วางไฟล์รูปภาพสำหรับฉากหลัง (แนะนำขนาด 1920x1080 px)
-  // 3. แก้ไขตัวแปร heroBackgroundImage ด้านล่าง
-  // 4. รูปภาพจะแสดงอัตโนมัติ
-  // ============================================
-  // วิธีใส่รูปภาพรถแต่ละรุ่น:
-  // 1. วางไฟล์รูปภาพรถในโฟลเดอร์ images/
-  // 2. แก้ไขค่า image: "images/ชื่อไฟล์.jpg" ใน cars array
-  // ============================================
-  // วิธีใส่ PDF:
-  // 1. สร้างโฟลเดอร์ "pdfs" ในโปรเจค
-  // 2. วางไฟล์โบรชัวร์ PDF
-  // 3. แก้ไขค่า pdf: "pdfs/ชื่อไฟล์.pdf"
-  // ============================================
-  
-  // 📸 ตั้งค่ารูปภาพฉากหลังตรงนี้
-  const heroBackgroundImage = "images/hero-background.jpg"; //  เปลี่ยนเป็น path รูปของคุณ
-  
-  // ตรวจสอบและแสดงรูปภาพฉากหลังถ้ามี
-  const heroBgElement = document.getElementById('heroBgImage');
-  if (heroBackgroundImage && heroBackgroundImage !== '') {
-    const img = new Image();
-    img.onload = function() {
-      heroBgElement.style.backgroundImage = `url('${heroBackgroundImage}')`;
-      heroBgElement.classList.add('has-image');
-      heroBgElement.innerHTML = ''; // ลบ placeholder ออก
-    };
-    img.onerror = function() {
-      console.log('ไม่พบไฟล์รูปภาพฉากหลัง: ' + heroBackgroundImage);
-    };
-    img.src = heroBackgroundImage;
-  }
-  
   const cars = [
-    // ========== MG3 Hybrid+ ==========
     {
       name: "All New MG3 Hybrid+",
       trim: "D",
@@ -585,8 +524,6 @@
       price: "619,900",
       specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
     },
-    
-    // ========== MG5 Pro ==========
     {
       name: "MG5 Pro",
       trim: "D",
@@ -620,8 +557,6 @@
       price: "669,900",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
     },
-    
-    // ========== NEW MG ZS ==========
     {
       name: "NEW MG ZS",
       trim: "D",
@@ -677,8 +612,6 @@
       price: "689,000",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
     },
-    
-    // ========== MG4 (MCE) ==========
     {
       name: "MG4 (MCE)",
       trim: "D",
@@ -701,8 +634,6 @@
       price: "709,900",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
     },
-    
-    // ========== MG S5 ==========
     {
       name: "MG S5",
       trim: "D+",
@@ -736,8 +667,6 @@
       price: "849,900",
       specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
     },
-    
-    // ========== Maxus 9 ==========
     {
       name: "Maxus 9",
       trim: "Plus",
@@ -804,8 +733,6 @@
       price: "1,819,000",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
-    
-    // ========== Maxus 7 ==========
     {
       name: "Maxus 7",
       trim: "X",
@@ -828,8 +755,6 @@
       price: "1,319,000",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
-    
-    // ========== MG IM6 ==========
     {
       name: "MG IM6 Performance",
       trim: "Performance",
@@ -863,8 +788,6 @@
       price: "1,549,900",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
-    
-    // ========== MG IM5 ==========
     {
       name: "MG IM5",
       trim: "Premium LR",
@@ -876,8 +799,6 @@
       price: "1,499,900",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
-    
-    // ========== MG URBAN ==========
     {
       name: "MG URBAN",
       trim: "STANDARD",
@@ -929,7 +850,7 @@
     });
 
     if (filtered.length === 0) {
-      carGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#718096;padding:60px;font-size:1.2rem;">ไม่พบรถที่ค้นหา 😕</p>';
+      carGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#999;padding:60px;font-size:1.2rem;">ไม่พบรถที่ค้นหา</p>';
       return;
     }
 
@@ -961,7 +882,7 @@
               <div class="spec"><strong>${car.specs.warranty}</strong>ประกัน</div>
               ${car.specs.battery ? `<div class="spec"><strong>${car.specs.battery}</strong>แบตเตอรี่</div>` : ''}
             </div>
-            <button class="btn-view"> เปิดโบรชัวร์ PDF</button>
+            <button class="btn-view">📄 เปิดโบรชัวร์ PDF</button>
           </div>
         </div>
       `;
