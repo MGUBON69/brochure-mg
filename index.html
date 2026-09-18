@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MG Catalog | โบรชัวร์รถยนต์ MG</title>
+<title>MG Catalog | โบรชัวร์รถยนต์ MG & Maxus</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -48,9 +48,7 @@
     color: #0a0e1a;
     text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
   }
-  .logo-text span {
-    color: #fff;
-  }
+  .logo-text span { color: #fff; }
   .search-box {
     padding: 12px 25px;
     border: 2px solid rgba(0, 212, 255, 0.5);
@@ -92,10 +90,7 @@
     z-index: 0;
     pointer-events: none;
   }
-  .hero-bg-logo svg {
-    width: 100%;
-    height: 100%;
-  }
+  .hero-bg-logo svg { width: 100%; height: 100%; }
   .hero::before {
     content: '';
     position: absolute;
@@ -103,10 +98,7 @@
     background: radial-gradient(circle at center, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
     z-index: 0;
   }
-  .hero-content {
-    position: relative;
-    z-index: 1;
-  }
+  .hero-content { position: relative; z-index: 1; }
   .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 15px;
@@ -180,7 +172,7 @@
     box-shadow: 0 20px 50px rgba(0, 212, 255, 0.3);
   }
   
-  /* ===== Image Placeholder Styles ===== */
+  /* ===== Image Styles ===== */
   .car-image {
     height: 220px;
     background: linear-gradient(135deg, #1a2332 0%, #0f1729 100%);
@@ -236,6 +228,20 @@
     font-weight: bold;
     z-index: 2;
     box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+  }
+  .image-hint {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(0, 212, 255, 0.5);
+    z-index: 3;
+    padding: 5px;
+    background: rgba(10, 14, 26, 0.7);
+    border-radius: 5px;
+    margin: 0 10px;
   }
   .car-info { padding: 22px; }
   .car-name {
@@ -380,22 +386,6 @@
     font-size: 0.9rem;
   }
 
-  /* ===== Image Upload Hint ===== */
-  .image-hint {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 0.75rem;
-    color: rgba(0, 212, 255, 0.5);
-    z-index: 3;
-    padding: 5px;
-    background: rgba(10, 14, 26, 0.7);
-    border-radius: 5px;
-    margin: 0 10px;
-  }
-
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
@@ -413,7 +403,6 @@
 <header>
   <div class="header-content">
     <div class="logo-container">
-      <!-- MG Logo SVG -->
       <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <path d="M100 10 L170 30 L190 100 L170 170 L100 190 L30 170 L10 100 L30 30 Z" 
               fill="none" stroke="#0a0e1a" stroke-width="8"/>
@@ -429,7 +418,6 @@
 </header>
 
 <section class="hero">
-  <!-- Background Logo Watermark -->
   <div class="hero-bg-logo">
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <path d="M100 10 L170 30 L190 100 L170 170 L100 190 L30 170 L10 100 L30 30 Z" 
@@ -446,13 +434,13 @@
   </div>
 </section>
 
+<!-- ✅ ตัดปุ่ม Pickup ออกแล้ว เหลือแค่ 6 แท็บ -->
 <div class="filter-tabs" id="filterTabs">
   <div class="tab active" data-filter="all">ทั้งหมด</div>
   <div class="tab" data-filter="ev">รถยนต์ไฟฟ้า (EV)</div>
   <div class="tab" data-filter="hybrid">Hybrid</div>
   <div class="tab" data-filter="suv">SUV</div>
   <div class="tab" data-filter="sedan">Sedan</div>
-  <div class="tab" data-filter="pickup">Pickup</div>
   <div class="tab" data-filter="mpv">MPV</div>
 </div>
 
@@ -465,7 +453,7 @@
     <div class="modal-actions">
       <button class="modal-btn" id="downloadBtn">️ ดาวน์โหลด</button>
       <button class="modal-btn" id="openNewBtn"> เปิดแท็บใหม่</button>
-      <button class="modal-btn close" id="closeBtn">✕ ปิด</button>
+      <button class="modal-btn close" id="closeBtn"> ปิด</button>
     </div>
   </div>
   <div class="modal-body">
@@ -475,7 +463,7 @@
 
 <footer>
   <p>© 2026 M2 Motorsport Evolution | MG & Maxus Catalog</p>
-  <p style="margin-top: 10px; color: rgba(0, 212, 255, 0.5);">📸 วางไฟล์รูปภาพในโฟลเดอร์ images/ และอัปเดต path ในโค้ด</p>
+  <p style="margin-top: 10px; color: rgba(0, 212, 255, 0.5);">📸 วางไฟล์รูปภาพในโฟลเดอร์ images/ และ PDF ในโฟลเดอร์ pdfs/</p>
 </footer>
 
 <script>
@@ -484,39 +472,92 @@
   // 1. สร้างโฟลเดอร์ "images" ในโปรเจค
   // 2. วางไฟล์รูปภาพรถแต่ละรุ่น (แนะนำขนาด 800x600 px)
   // 3. แก้ไขค่า image: "images/ชื่อไฟล์.jpg"
-  // 4. หรือใช้ URL จากที่อื่นได้
+  // ============================================
+  //  วิธีใส่ PDF:
+  // 1. สร้างโฟลเดอร์ "pdfs" ในโปรเจค
+  // 2. วางไฟล์โบรชัวร์ PDF
+  // 3. แก้ไขค่า pdf: "pdfs/ชื่อไฟล์.pdf"
   // ============================================
   
   const cars = [
+    // ========== MG3 Hybrid+ ==========
     {
       name: "All New MG3 Hybrid+",
       trim: "D",
       type: "hybrid",
       typeName: "Hybrid Hatchback",
       desc: "รถยนต์ Hybrid hatchback ประหยัดน้ำมัน",
-      image: "images/mg3-hybrid-d.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg3-hybrid-d.jpg",
       pdf: "pdfs/mg3-hybrid-d.pdf",
       price: "579,900",
       specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
     },
+    {
+      name: "All New MG3 Hybrid+",
+      trim: "X (YELLOW)",
+      type: "hybrid",
+      typeName: "Hybrid Hatchback",
+      desc: "รุ่นพิเศษ สีเหลืองสปอร์ต",
+      image: "images/mg3-hybrid-x-yellow.jpg",
+      pdf: "pdfs/mg3-hybrid-x-yellow.pdf",
+      price: "619,900",
+      specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
+    },
+    {
+      name: "All New MG3 Hybrid+",
+      trim: "X",
+      type: "hybrid",
+      typeName: "Hybrid Hatchback",
+      desc: "รุ่นท็อป พร้อมฟีเจอร์ครบ",
+      image: "images/mg3-hybrid-x.jpg",
+      pdf: "pdfs/mg3-hybrid-x.pdf",
+      price: "619,900",
+      specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
+    },
+    
+    // ========== MG5 Pro ==========
     {
       name: "MG5 Pro",
       trim: "D",
       type: "sedan",
       typeName: "Sedan",
       desc: "ซีดานดีไซน์โฉบเฉี่ยว",
-      image: "images/mg5-pro-d.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg5-pro-d.jpg",
       pdf: "pdfs/mg5-pro-d.pdf",
       price: "629,900",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
     },
+    {
+      name: "MG5 Pro",
+      trim: "D (GREEN)",
+      type: "sedan",
+      typeName: "Sedan",
+      desc: "รุ่น D สีเขียวพิเศษ",
+      image: "images/mg5-pro-d-green.jpg",
+      pdf: "pdfs/mg5-pro-d-green.pdf",
+      price: "629,900",
+      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+    },
+    {
+      name: "MG5 Pro",
+      trim: "X",
+      type: "sedan",
+      typeName: "Sedan",
+      desc: "รุ่นท็อป พร้อมฟีเจอร์ครบครัน",
+      image: "images/mg5-pro-x.jpg",
+      pdf: "pdfs/mg5-pro-x.pdf",
+      price: "669,900",
+      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+    },
+    
+    // ========== NEW MG ZS ==========
     {
       name: "NEW MG ZS",
       trim: "D",
       type: "suv",
       typeName: "Compact SUV",
       desc: "SUV คอมแพ็ค ยอดนิยม",
-      image: "images/mg-zs-d.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg-zs-d.jpg",
       pdf: "pdfs/mg-zs-d.pdf",
       price: "599,000",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
@@ -527,8 +568,19 @@
       type: "suv",
       typeName: "Compact SUV",
       desc: "รุ่น X สีสองโทน",
-      image: "images/mg-zs-x-bw.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg-zs-x-bw.jpg",
       pdf: "pdfs/mg-zs-x-bw.pdf",
+      price: "649,000",
+      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+    },
+    {
+      name: "NEW MG ZS",
+      trim: "X (RED)",
+      type: "suv",
+      typeName: "Compact SUV",
+      desc: "รุ่น X สีแดงสปอร์ต",
+      image: "images/mg-zs-x-red.jpg",
+      pdf: "pdfs/mg-zs-x-red.pdf",
       price: "649,000",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
     },
@@ -538,18 +590,31 @@
       type: "suv",
       typeName: "Compact SUV",
       desc: "รุ่น V รุ่นท็อป",
-      image: "images/mg-zs-v.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg-zs-v.jpg",
       pdf: "pdfs/mg-zs-v.pdf",
       price: "689,000",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
     },
+    {
+      name: "NEW MG ZS",
+      trim: "V (Black)",
+      type: "suv",
+      typeName: "Compact SUV",
+      desc: "รุ่น V สีดำ",
+      image: "images/mg-zs-v-black.jpg",
+      pdf: "pdfs/mg-zs-v-black.pdf",
+      price: "689,000",
+      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+    },
+    
+    // ========== MG4 (MCE) ==========
     {
       name: "MG4 (MCE)",
       trim: "D",
       type: "ev",
       typeName: "Electric Hatchback",
       desc: "รถยนต์ไฟฟ้า 100% ดีไซน์สปอร์ต",
-      image: "images/mg4-d.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg4-d.jpg",
       pdf: "pdfs/mg4-d.pdf",
       price: "599,900",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
@@ -560,29 +625,55 @@
       type: "ev",
       typeName: "Electric Hatchback",
       desc: "รุ่น Long Range วิ่งไกล",
-      image: "images/mg4-x-lr.jpg", //  ใส่ path รูปภาพตรงนี้
+      image: "images/mg4-x-lr.jpg",
       pdf: "pdfs/mg4-x-lr.pdf",
       price: "709,900",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
     },
+    
+    // ========== MG S5 ==========
     {
-      name: "MG 5S",
+      name: "MG S5",
       trim: "D+",
       type: "ev",
       typeName: "Electric Sedan",
       desc: "ซีดานไฟฟ้า สมรรถนะสูง",
-      image: "images/mg5s-d.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg5s-d.jpg",
       pdf: "pdfs/mg5s-d.pdf",
       price: "649,900",
       specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
     },
+    {
+      name: "MG S5",
+      trim: "X+",
+      type: "ev",
+      typeName: "Electric Sedan",
+      desc: "รุ่น X+ รุ่นท็อป",
+      image: "images/mg5s-x.jpg",
+      pdf: "pdfs/mg5s-x.pdf",
+      price: "759,900",
+      specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
+    },
+    {
+      name: "MG S5",
+      trim: "V+",
+      type: "ev",
+      typeName: "Electric Sedan",
+      desc: "รุ่น V+ พรีเมียม",
+      image: "images/mg5s-v.jpg",
+      pdf: "pdfs/mg5s-v.pdf",
+      price: "849,900",
+      specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
+    },
+    
+    // ========== Maxus 9 ==========
     {
       name: "Maxus 9",
       trim: "Plus",
       type: "mpv",
       typeName: "Electric MPV",
       desc: "MPV ไฟฟ้าหรู 7 ที่นั่ง",
-      image: "images/maxus9-plus.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/maxus9-plus.jpg",
       pdf: "pdfs/maxus9-plus.pdf",
       price: "1,849,000",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
@@ -593,9 +684,31 @@
       type: "mpv",
       typeName: "Electric MPV",
       desc: "รุ่น X ระดับพรีเมียม",
-      image: "images/maxus9-x.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/maxus9-x.jpg",
       pdf: "pdfs/maxus9-x.pdf",
       price: "1,599,000",
+      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+    },
+    {
+      name: "Maxus 9",
+      trim: "V",
+      type: "mpv",
+      typeName: "Electric MPV",
+      desc: "รุ่น V ท็อปสุด",
+      image: "images/maxus9-v.jpg",
+      pdf: "pdfs/maxus9-v.pdf",
+      price: "1,799,000",
+      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+    },
+    {
+      name: "Maxus 9 (Grey)",
+      trim: "V",
+      type: "mpv",
+      typeName: "Electric MPV",
+      desc: "รุ่น V สีเทา",
+      image: "images/maxus9-grey-v.jpg",
+      pdf: "pdfs/maxus9-grey-v.pdf",
+      price: "1,829,000",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
     {
@@ -604,64 +717,116 @@
       type: "mpv",
       typeName: "Electric MPV",
       desc: "รุ่น V Plus พรีเมียม",
-      image: "images/maxus9-vplus.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/maxus9-vplus.jpg",
       pdf: "pdfs/maxus9-vplus.pdf",
       price: "1,799,000",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
+    {
+      name: "Maxus 9 (Grey)",
+      trim: "V Plus",
+      type: "mpv",
+      typeName: "Electric MPV",
+      desc: "รุ่น V Plus สีเทา",
+      image: "images/maxus9-grey-vplus.jpg",
+      pdf: "pdfs/maxus9-grey-vplus.pdf",
+      price: "1,819,000",
+      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+    },
+    
+    // ========== Maxus 7 ==========
     {
       name: "Maxus 7",
       trim: "X",
       type: "mpv",
       typeName: "Electric MPV",
       desc: "MPV ไฟฟ้าขนาดกลาง",
-      image: "images/maxus7-x.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/maxus7-x.jpg",
       pdf: "pdfs/maxus7-x.pdf",
       price: "1,299,000",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
     {
-      name: "MG Cyberter",
+      name: "Maxus 7 (Grey/Black)",
       trim: "X",
-      type: "pickup",
-      typeName: "Electric Pickup",
-      desc: "รถกระบะไฟฟ้า ดีไซน์ล้ำสมัย",
-      image: "images/mg-cyberter-x.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
-      pdf: "pdfs/mg-cyberter-x.pdf",
-      price: "2,499,000",
-      specs: { drive: "AWD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+      type: "mpv",
+      typeName: "Electric MPV",
+      desc: "รุ่น X สีเทา/ดำ",
+      image: "images/maxus7-x-gb.jpg",
+      pdf: "pdfs/maxus7-x-gb.pdf",
+      price: "1,319,000",
+      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
+    
+    // ========== MG IM6 ==========
     {
       name: "MG IM6 Performance",
       trim: "Performance",
       type: "ev",
       typeName: "Electric SUV Coupe",
       desc: "SUV Coupe ไฟฟ้า สมรรถนะสูงสุด",
-      image: "images/mg-im6-performance.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg-im6-performance.jpg",
       pdf: "pdfs/mg-im6-performance.pdf",
       price: "1,749,900",
       specs: { drive: "AWD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
+    {
+      name: "MG IM6 Premium",
+      trim: "Premium",
+      type: "ev",
+      typeName: "Electric SUV Coupe",
+      desc: "รุ่น Premium หรูหรา",
+      image: "images/mg-im6-premium.jpg",
+      pdf: "pdfs/mg-im6-premium.pdf",
+      price: "1,349,900",
+      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+    },
+    {
+      name: "MG IM6 Premium",
+      trim: "Premium LR",
+      type: "ev",
+      typeName: "Electric SUV Coupe",
+      desc: "รุ่น Premium Long Range",
+      image: "images/mg-im6-premium-lr.jpg",
+      pdf: "pdfs/mg-im6-premium-lr.pdf",
+      price: "1,549,900",
+      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+    },
+    
+    // ========== MG IM5 ==========
     {
       name: "MG IM5",
       trim: "Premium LR",
       type: "ev",
       typeName: "Electric Sedan",
       desc: "ซีดานไฟฟ้าพรีเมียม",
-      image: "images/mg-im5.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg-im5.jpg",
       pdf: "pdfs/mg-im5.pdf",
       price: "1,499,900",
       specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
     },
+    
+    // ========== MG URBAN ==========
     {
       name: "MG URBAN",
       trim: "STANDARD",
       type: "ev",
       typeName: "Electric City Car",
       desc: "รถไฟฟ้าเมืองเล็ก คล่องตัว",
-      image: "images/mg-urban-standard.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg-urban-standard.jpg",
       pdf: "pdfs/mg-urban-standard.pdf",
       price: "549,900",
+      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
+    },
+    {
+      name: "MG URBAN",
+      trim: "MAX",
+      type: "ev",
+      typeName: "Electric City Car",
+      desc: "รุ่น MAX ฟีเจอร์ครบ",
+      image: "images/mg-urban-max.jpg",
+      pdf: "pdfs/mg-urban-max.pdf",
+      price: "619,900",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
     },
     {
@@ -670,7 +835,7 @@
       type: "ev",
       typeName: "Electric City Car",
       desc: "รุ่น ULTRA ท็อปสุด",
-      image: "images/mg-urban-ultra.jpg", // 🔸 ใส่ path รูปภาพตรงนี้
+      image: "images/mg-urban-ultra.jpg",
       pdf: "pdfs/mg-urban-ultra.pdf",
       price: "729,900",
       specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
@@ -697,8 +862,7 @@
       return;
     }
 
-    carGrid.innerHTML = filtered.map((car, i) => {
-      // ตรวจสอบว่ามีรูปหรือไม่
+    carGrid.innerHTML = filtered.map((car) => {
       const hasImage = car.image && car.image !== '';
       const imageHtml = hasImage 
         ? `<div class="car-image has-image" style="background-image: url('${car.image}')">
@@ -707,7 +871,7 @@
            </div>`
         : `<div class="car-image">
              <div class="image-placeholder">
-               <div class="image-placeholder-icon"></div>
+               <div class="image-placeholder-icon">🚗</div>
                <div class="image-placeholder-text">รอรูปภาพ</div>
              </div>
              <div class="car-badge">${car.typeName}</div>
