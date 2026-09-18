@@ -74,31 +74,79 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .hero-bg-logo {
+  
+  /* 📸 Background Image Placeholder */
+  .hero-bg-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    opacity: 0.08;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
     z-index: 0;
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .hero-bg-logo svg { width: 100%; height: 100%; }
+  .hero-bg-image.has-image {
+    opacity: 0.6;
+  }
+  .hero-bg-placeholder {
+    text-align: center;
+    padding: 40px;
+    border: 3px dashed rgba(0, 212, 255, 0.4);
+    border-radius: 20px;
+    background: rgba(10, 14, 26, 0.6);
+    backdrop-filter: blur(5px);
+  }
+  .hero-bg-placeholder-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(123, 44, 191, 0.2));
+    border: 3px dashed rgba(0, 212, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+  }
+  .hero-bg-placeholder-text {
+    color: rgba(0, 212, 255, 0.8);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .hero-bg-placeholder-hint {
+    color: rgba(0, 212, 255, 0.5);
+    font-size: 0.9rem;
+  }
+  
   .hero::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
-    z-index: 0;
+    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+    z-index: 1;
   }
-  .hero-content { position: relative; z-index: 1; }
+  .hero-content { 
+    position: relative; 
+    z-index: 2;
+    max-width: 900px;
+  }
   .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 15px;
@@ -106,6 +154,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
   }
   .hero p { 
     font-size: 1.2rem; 
@@ -394,7 +443,8 @@
     .search-box { width: 100%; }
     .modal-header { flex-direction: column; gap: 12px; }
     .car-grid { grid-template-columns: 1fr; }
-    .hero-bg-logo { width: 400px; height: 400px; }
+    .hero-bg-placeholder-icon { width: 80px; height: 80px; font-size: 40px; }
+    .hero-bg-placeholder-text { font-size: 1rem; }
   }
 </style>
 </head>
@@ -413,20 +463,18 @@
       </svg>
       <div class="logo-text">M2 <span>MOTORSPORT</span></div>
     </div>
-    <input type="text" class="search-box" id="searchInput" placeholder="🔍 ค้นหารุ่นรถ...">
+    <input type="text" class="search-box" id="searchInput" placeholder=" ค้นหารุ่นรถ...">
   </div>
 </header>
 
+<!-- 📸 Hero Section พร้อม Placeholder สำหรับรูปภาพฉากหลัง -->
 <section class="hero">
-  <div class="hero-bg-logo">
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100 10 L170 30 L190 100 L170 170 L100 190 L30 170 L10 100 L30 30 Z" 
-            fill="none" stroke="#00d4ff" stroke-width="8"/>
-      <path d="M100 20 L160 37 L177 100 L160 163 L100 180 L40 163 L23 100 L40 37 Z" 
-            fill="none" stroke="#00d4ff" stroke-width="4"/>
-      <text x="100" y="130" font-family="Arial Black, sans-serif" font-size="80" 
-            font-weight="900" text-anchor="middle" fill="#00d4ff">MG</text>
-    </svg>
+  <div class="hero-bg-image" id="heroBgImage">
+    <div class="hero-bg-placeholder">
+      <div class="hero-bg-placeholder-icon">🖼️</div>
+      <div class="hero-bg-placeholder-text">รอรูปภาพฉากหลัง</div>
+      <div class="hero-bg-placeholder-hint">วางไฟล์รูปภาพในโฟลเดอร์ images/ และตั้งค่าในโค้ด</div>
+    </div>
   </div>
   <div class="hero-content">
     <h1>โบรชัวร์รถยนต์ MG & Maxus</h1>
@@ -451,9 +499,9 @@
   <div class="modal-header">
     <div class="modal-title" id="modalTitle">โบรชัวร์</div>
     <div class="modal-actions">
-      <button class="modal-btn" id="downloadBtn">️ ดาวน์โหลด</button>
-      <button class="modal-btn" id="openNewBtn"> เปิดแท็บใหม่</button>
-      <button class="modal-btn close" id="closeBtn"> ปิด</button>
+      <button class="modal-btn" id="downloadBtn">⬇️ ดาวน์โหลด</button>
+      <button class="modal-btn" id="openNewBtn">🔗 เปิดแท็บใหม่</button>
+      <button class="modal-btn close" id="closeBtn">✕ ปิด</button>
     </div>
   </div>
   <div class="modal-body">
@@ -468,16 +516,39 @@
 
 <script>
   // ============================================
-  // 📸 วิธีใส่รูปภาพ:
+  // 📸 วิธีใส่รูปภาพฉากหลัง (Hero Background):
   // 1. สร้างโฟลเดอร์ "images" ในโปรเจค
-  // 2. วางไฟล์รูปภาพรถแต่ละรุ่น (แนะนำขนาด 800x600 px)
-  // 3. แก้ไขค่า image: "images/ชื่อไฟล์.jpg"
+  // 2. วางไฟล์รูปภาพสำหรับฉากหลัง (แนะนำขนาด 1920x1080 px)
+  // 3. แก้ไขตัวแปร heroBackgroundImage ด้านล่าง
+  // 4. รูปภาพจะแสดงอัตโนมัติ
   // ============================================
-  //  วิธีใส่ PDF:
+  // วิธีใส่รูปภาพรถแต่ละรุ่น:
+  // 1. วางไฟล์รูปภาพรถในโฟลเดอร์ images/
+  // 2. แก้ไขค่า image: "images/ชื่อไฟล์.jpg" ใน cars array
+  // ============================================
+  // วิธีใส่ PDF:
   // 1. สร้างโฟลเดอร์ "pdfs" ในโปรเจค
   // 2. วางไฟล์โบรชัวร์ PDF
   // 3. แก้ไขค่า pdf: "pdfs/ชื่อไฟล์.pdf"
   // ============================================
+  
+  // 📸 ตั้งค่ารูปภาพฉากหลังตรงนี้
+  const heroBackgroundImage = "images/hero-background.jpg"; //  เปลี่ยนเป็น path รูปของคุณ
+  
+  // ตรวจสอบและแสดงรูปภาพฉากหลังถ้ามี
+  const heroBgElement = document.getElementById('heroBgImage');
+  if (heroBackgroundImage && heroBackgroundImage !== '') {
+    const img = new Image();
+    img.onload = function() {
+      heroBgElement.style.backgroundImage = `url('${heroBackgroundImage}')`;
+      heroBgElement.classList.add('has-image');
+      heroBgElement.innerHTML = ''; // ลบ placeholder ออก
+    };
+    img.onerror = function() {
+      console.log('ไม่พบไฟล์รูปภาพฉากหลัง: ' + heroBackgroundImage);
+    };
+    img.src = heroBackgroundImage;
+  }
   
   const cars = [
     // ========== MG3 Hybrid+ ==========
@@ -890,7 +961,7 @@
               <div class="spec"><strong>${car.specs.warranty}</strong>ประกัน</div>
               ${car.specs.battery ? `<div class="spec"><strong>${car.specs.battery}</strong>แบตเตอรี่</div>` : ''}
             </div>
-            <button class="btn-view">📄 เปิดโบรชัวร์ PDF</button>
+            <button class="btn-view"> เปิดโบรชัวร์ PDF</button>
           </div>
         </div>
       `;
