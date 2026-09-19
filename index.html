@@ -12,414 +12,159 @@
     color: #1a1a1a;
     line-height: 1.6;
   }
-
-  /* ===== Header ===== */
   header {
     background: #ffffff;
     padding: 20px 40px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: sticky; top: 0; z-index: 100;
   }
   .header-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    max-width: 1400px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 15px;
   }
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
+  .logo-container { display: flex; align-items: center; gap: 15px; }
   .logo-box {
-    width: 60px;
-    height: 60px;
-    background: #000000;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 60px; height: 60px; background: #000;
+    border-radius: 16px; display: flex; align-items: center; justify-content: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
-  .logo-box svg {
-    width: 40px;
-    height: 40px;
-  }
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-  }
-  .logo-main {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #1a1a1a;
-    letter-spacing: 1px;
-    line-height: 1.2;
-  }
-  .logo-sub {
-    font-size: 0.75rem;
-    color: #0066cc;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
+  .logo-box svg { width: 40px; height: 40px; }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-main { font-size: 1.8rem; font-weight: 900; color: #1a1a1a; letter-spacing: 1px; line-height: 1.2; }
+  .logo-sub { font-size: 0.75rem; color: #0066cc; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
   .search-box {
-    padding: 12px 25px;
-    border: 2px solid #e0e0e0;
-    border-radius: 30px;
-    background: #f8f9fa;
-    color: #1a1a1a;
-    font-size: 1rem;
-    width: 350px;
-    transition: all 0.3s;
+    padding: 12px 25px; border: 2px solid #e0e0e0; border-radius: 30px;
+    background: #f8f9fa; color: #1a1a1a; font-size: 1rem; width: 350px; transition: all 0.3s;
   }
   .search-box::placeholder { color: #999; }
-  .search-box:focus { 
-    outline: none; 
-    border-color: #0066cc;
-    background: #fff;
-    box-shadow: 0 0 0 4px rgba(0,102,204,0.1);
-  }
+  .search-box:focus { outline: none; border-color: #0066cc; background: #fff; box-shadow: 0 0 0 4px rgba(0,102,204,0.1); }
 
-  /* ===== Hero ===== */
   .hero {
     background: linear-gradient(180deg, #ffffff 0%, #f0f4f8 100%);
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-logo-section {
-    margin-bottom: 30px;
+    padding: 80px 20px; text-align: center;
   }
   .hero-logo {
-    width: 100px;
-    height: 100px;
-    background: #000000;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    width: 100px; height: 100px; background: #000; border-radius: 24px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
-  .hero-logo svg {
-    width: 60px;
-    height: 60px;
-  }
-  .hero-evolution {
-    font-size: 0.85rem;
-    color: #0066cc;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    color: #1a1a1a;
-    font-weight: 900;
-    letter-spacing: 1px;
-  }
-  .hero-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto 10px;
-  }
-  .hero-location {
-    font-size: 0.95rem;
-    color: #999;
-    font-weight: 500;
-  }
+  .hero-logo svg { width: 60px; height: 60px; }
+  .hero-evolution { font-size: 0.85rem; color: #0066cc; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; }
+  .hero h1 { font-size: 2.8rem; margin-bottom: 15px; color: #1a1a1a; font-weight: 900; letter-spacing: 1px; }
+  .hero-subtitle { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto 10px; }
+  .hero-location { font-size: 0.95rem; color: #999; font-weight: 500; }
 
-  /* ===== Filter Tabs ===== */
   .filter-tabs {
-    max-width: 1400px;
-    margin: 40px auto 20px;
-    padding: 0 20px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    max-width: 1400px; margin: 40px auto 20px; padding: 0 20px;
+    display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
   }
   .tab {
-    padding: 12px 28px;
-    background: #ffffff;
-    border: 2px solid #e0e0e0;
-    border-radius: 30px;
-    color: #666;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 0.95rem;
-    font-weight: 500;
+    padding: 12px 28px; background: #fff; border: 2px solid #e0e0e0;
+    border-radius: 30px; color: #666; cursor: pointer; transition: all 0.3s;
+    font-size: 0.95rem; font-weight: 500;
   }
-  .tab:hover { 
-    border-color: #0066cc;
-    color: #0066cc;
-    background: #f0f7ff;
-  }
-  .tab.active {
-    background: #0066cc;
-    border-color: #0066cc;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(0,102,204,0.3);
-  }
+  .tab:hover { border-color: #0066cc; color: #0066cc; background: #f0f7ff; }
+  .tab.active { background: #0066cc; border-color: #0066cc; color: #fff; box-shadow: 0 4px 12px rgba(0,102,204,0.3); }
 
-  /* ===== Car Grid ===== */
   .car-grid {
-    max-width: 1400px;
-    margin: 30px auto 60px;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 25px;
+    max-width: 1400px; margin: 30px auto 60px; padding: 0 20px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 25px;
   }
   .car-card {
-    background: #ffffff;
-    border: 1px solid #e8e8e8;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.3s;
-    cursor: pointer;
-    position: relative;
+    background: #fff; border: 1px solid #e8e8e8; border-radius: 16px;
+    overflow: hidden; transition: all 0.3s; cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-  .car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    border-color: #0066cc;
-  }
-  
-  /* ===== Image Styles ===== */
+  .car-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); border-color: #0066cc; }
   .car-image {
     height: 220px;
     background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .car-image.has-image {
-    background-size: cover;
-    background-position: center;
+    position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;
+    background-size: cover; background-position: center;
   }
   .car-image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
+    content: ''; position: absolute; inset: 0;
     background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
   }
-  .image-placeholder {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 20px;
-  }
+  .image-placeholder { position: relative; z-index: 1; text-align: center; padding: 20px; }
   .image-placeholder-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px;
-    background: rgba(0,102,204,0.1);
-    border: 2px dashed #0066cc;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    color: #0066cc;
+    width: 80px; height: 80px; margin: 0 auto 15px;
+    background: rgba(0,102,204,0.1); border: 2px dashed #0066cc; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 40px; color: #0066cc;
   }
-  .image-placeholder-text {
-    color: #0066cc;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
+  .image-placeholder-text { color: #0066cc; font-size: 0.9rem; font-weight: 500; }
   .car-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: #0066cc;
-    color: #fff;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 2;
+    position: absolute; top: 15px; right: 15px; background: #0066cc; color: #fff;
+    padding: 6px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;
     box-shadow: 0 2px 8px rgba(0,102,204,0.3);
   }
-  .image-hint {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.9);
-    z-index: 3;
-    padding: 5px;
-    background: rgba(0,0,0,0.6);
-    border-radius: 5px;
-    margin: 0 10px;
+  .status-badge {
+    position: absolute; top: 15px; left: 15px; padding: 6px 12px;
+    border-radius: 20px; font-size: 0.75rem; font-weight: 600; z-index: 2;
   }
+  .status-ready { background: #22c55e; color: #fff; }
+  .status-pending { background: #f59e0b; color: #fff; }
+
   .car-info { padding: 22px; }
-  .car-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: #1a1a1a;
-  }
-  .car-trim {
-    color: #0066cc;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-  .car-desc {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    min-height: 42px;
-  }
-  .car-price {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #0066cc;
-    margin-bottom: 15px;
-  }
+  .car-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; color: #1a1a1a; }
+  .car-trim { color: #0066cc; font-size: 0.9rem; margin-bottom: 10px; font-weight: 600; }
+  .car-desc { color: #666; font-size: 0.9rem; margin-bottom: 15px; min-height: 42px; }
+  .car-price { font-size: 1.8rem; font-weight: 800; color: #0066cc; margin-bottom: 15px; }
   .car-specs {
-    display: flex;
-    gap: 15px;
-    padding: 15px 0;
-    border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
+    display: flex; gap: 15px; padding: 15px 0;
+    border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 15px; flex-wrap: wrap;
   }
-  .spec {
-    font-size: 0.85rem;
-    color: #666;
-  }
-  .spec strong {
-    display: block;
-    color: #1a1a1a;
-    font-size: 1.05rem;
-    margin-bottom: 3px;
-  }
+  .spec { font-size: 0.85rem; color: #666; }
+  .spec strong { display: block; color: #1a1a1a; font-size: 1.05rem; margin-bottom: 3px; }
   .btn-view {
-    width: 100%;
-    padding: 14px;
-    background: #0066cc;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    width: 100%; padding: 14px; background: #0066cc; color: #fff; border: none;
+    border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer;
+    transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;
     box-shadow: 0 4px 12px rgba(0,102,204,0.25);
   }
-  .btn-view:hover {
-    background: #0052a3;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,102,204,0.35);
-  }
+  .btn-view:hover { background: #0052a3; transform: translateY(-2px); }
+  .btn-view.disabled { background: #ccc; cursor: not-allowed; box-shadow: none; }
+  .btn-view.disabled:hover { transform: none; background: #ccc; }
 
-  /* ===== Modal ===== */
   .modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 1000;
-    padding: 20px;
-    animation: fadeIn 0.3s;
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+    z-index: 1000; padding: 20px; animation: fadeIn 0.3s;
   }
   .modal.active { display: flex; flex-direction: column; }
   @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
   .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    background: #ffffff;
-    border-radius: 12px 12px 0 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 25px; background: #fff; border-radius: 12px 12px 0 0;
     border-bottom: 3px solid #0066cc;
   }
-  .modal-title { 
-    font-size: 1.4rem; 
-    font-weight: 700;
-    color: #1a1a1a;
-  }
+  .modal-title { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; }
   .modal-actions { display: flex; gap: 10px; }
   .modal-btn {
-    padding: 10px 20px;
-    background: #f0f0f0;
-    color: #1a1a1a;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s;
+    padding: 10px 20px; background: #f0f0f0; color: #1a1a1a; border: none;
+    border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
   }
-  .modal-btn:hover { 
-    background: #0066cc;
-    color: #fff;
-  }
-  .modal-btn.close { 
-    background: #ff4444;
-    color: #fff;
-  }
-  .modal-btn.close:hover { 
-    background: #cc0000;
-  }
-  .modal-body {
-    flex: 1;
-    background: #fff;
-    border-radius: 0 0 12px 12px;
-    overflow: hidden;
-  }
-  .modal-body iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+  .modal-btn:hover { background: #0066cc; color: #fff; }
+  .modal-btn.close { background: #ff4444; color: #fff; }
+  .modal-btn.close:hover { background: #cc0000; }
+  .modal-body { flex: 1; background: #fff; border-radius: 0 0 12px 12px; overflow: hidden; }
+  .modal-body iframe { width: 100%; height: 100%; border: none; }
 
-  /* ===== Footer ===== */
   footer {
-    background: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-    border-top: 1px solid #e8e8e8;
-    color: #999;
-    font-size: 0.9rem;
+    background: #fff; padding: 30px 20px; text-align: center;
+    border-top: 1px solid #e8e8e8; color: #999; font-size: 0.9rem;
   }
-  footer strong {
-    color: #0066cc;
-  }
+  footer strong { color: #0066cc; }
 
-  /* ===== Responsive ===== */
   @media (max-width: 768px) {
     .hero h1 { font-size: 2rem; }
     .logo-main { font-size: 1.4rem; }
     .logo-box { width: 50px; height: 50px; }
-    .logo-box svg { width: 32px; height: 32px; }
     .search-box { width: 100%; }
     .modal-header { flex-direction: column; gap: 12px; }
     .car-grid { grid-template-columns: 1fr; }
     .hero-logo { width: 80px; height: 80px; }
-    .hero-logo svg { width: 48px; height: 48px; }
   }
 </style>
 </head>
@@ -430,7 +175,7 @@
     <div class="logo-container">
       <div class="logo-box">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90" 
+          <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90"
                 font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
         </svg>
       </div>
@@ -444,18 +189,16 @@
 </header>
 
 <section class="hero">
-  <div class="hero-logo-section">
-    <div class="hero-logo">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90" 
-              font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
-      </svg>
-    </div>
-    <div class="hero-evolution">EVOLUTION</div>
-    <h1>M2 MOTORSPORT</h1>
-    <div class="hero-subtitle">Brochure MG</div>
-    <div class="hero-location">สามารถดู หรือโหลดได้เลยค่ะ</div>
+  <div class="hero-logo">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90"
+            font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
+    </svg>
   </div>
+  <div class="hero-evolution">EVOLUTION</div>
+  <h1>M2 MOTORSPORT</h1>
+  <div class="hero-subtitle">Brochure MG</div>
+  <div class="hero-location">สามารถดู หรือโหลดได้เลยค่ะ</div>
 </section>
 
 <div class="filter-tabs" id="filterTabs">
@@ -469,7 +212,6 @@
 
 <div class="car-grid" id="carGrid"></div>
 
-<!-- PDF Modal -->
 <div class="modal" id="pdfModal">
   <div class="modal-header">
     <div class="modal-title" id="modalTitle">โบรชัวร์</div>
@@ -490,377 +232,324 @@
 </footer>
 
 <script>
-  const cars = [
-    {
-      name: "All New MG3 Hybrid+",
-      trim: "D",
-      type: "hybrid",
-      typeName: "Hybrid Hatchback",
-      desc: "รถยนต์ Hybrid hatchback ประหยัดน้ำมัน",
-      image: "images/mg3-hybrid-d.jpg",
-      pdf: "pdfs/mg3-hybrid-d.pdf",
-      price: "579,900",
-      specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
-    },
-    {
-      name: "All New MG3 Hybrid+",
-      trim: "X",
-      type: "hybrid",
-      typeName: "Hybrid Hatchback",
-      desc: "รุ่นท็อป พร้อมฟีเจอร์ครบ",
-      image: "images/mg3-hybrid-x.jpg",
-      pdf: "pdfs/mg3-hybrid-x.pdf",
-      price: "619,900",
-      specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
-    },
-    {
-      name: "MG5 Pro",
-      trim: "D",
-      type: "sedan",
-      typeName: "Sedan",
-      desc: "ซีดานดีไซน์โฉบเฉี่ยว",
-      image: "images/mg5-pro-d.jpg",
-      pdf: "pdfs/mg5-pro-d.pdf",
-      price: "629,900",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
-    },
-    {
-      name: "MG5 Pro",
-      trim: "X",
-      type: "sedan",
-      typeName: "Sedan",
-      desc: "รุ่นท็อป พร้อมฟีเจอร์ครบครัน",
-      image: "images/mg5-pro-x.jpg",
-      pdf: "pdfs/mg5-pro-x.pdf",
-      price: "669,900",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
-    },
-    {
-      name: "NEW MG ZS",
-      trim: "D",
-      type: "suv",
-      typeName: "Compact SUV",
-      desc: "SUV คอมแพ็ค ยอดนิยม",
-      image: "images/mg-zs-d.jpg",
-      pdf: "pdfs/mg-zs-d.pdf",
-      price: "599,000",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
-    },
-    {
-      name: "NEW MG ZS",
-      trim: "X (RED)",
-      type: "suv",
-      typeName: "Compact SUV",
-      desc: "รุ่น X สีแดงสปอร์ต",
-      image: "images/mg-zs-x-red.jpg",
-      pdf: "pdfs/mg-zs-x-red.pdf",
-      price: "649,000",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
-    },
-    {
-      name: "NEW MG ZS",
-      trim: "V",
-      type: "suv",
-      typeName: "Compact SUV",
-      desc: "รุ่น V รุ่นท็อป",
-      image: "images/mg-zs-v.jpg",
-      pdf: "pdfs/mg-zs-v.pdf",
-      price: "689,000",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
-    },
-    {
-      name: "MG4 (MCE)",
-      trim: "D",
-      type: "ev",
-      typeName: "Electric Hatchback",
-      desc: "รถยนต์ไฟฟ้า 100% ดีไซน์สปอร์ต",
-      image: "images/mg4-d.jpg",
-      pdf: "pdfs/mg4-d.pdf",
-      price: "599,900",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG4 (MCE)",
-      trim: "X LR",
-      type: "ev",
-      typeName: "Electric Hatchback",
-      desc: "รุ่น Long Range วิ่งไกล",
-      image: "images/mg4-x-lr.jpg",
-      pdf: "pdfs/mg4-x-lr.pdf",
-      price: "709,900",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG S5",
-      trim: "D+",
-      type: "ev",
-      typeName: "Electric SUV",
-      desc: "SUVไฟฟ้า สุดคุ้ม",
-      image: "images/mg5s-d.jpg",
-      pdf: "pdfs/mg5s-d.pdf",
-      price: "649,900",
-      specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG S5",
-      trim: "X+",
-      type: "ev",
-      typeName: "Electric SUV",
-      desc: "รุ่น X+ สุดHOT",
-      image: "images/mg5s-x.jpg",
-      pdf: "pdfs/mg5s-x.pdf",
-      price: "759,900",
-      specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG S5",
-      trim: "V+",
-      type: "ev",
-      typeName: "Electric SUV",
-      desc: "รุ่น V+ ตัวท็อป",
-      image: "images/mg5s-v.jpg",
-      pdf: "pdfs/mg5s-v.pdf",
-      price: "849,900",
-      specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "Maxus 9",
-      trim: "X",
-      type: "mpv",
-      typeName: "Electric MPV",
-      desc: "รุ่น X ระดับพรีเมียม",
-      image: "images/maxus9-x.jpg",
-      pdf: "pdfs/maxus9-x.pdf",
-      price: "1,599,000",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "Maxus 9",
-      trim: "V",
-      type: "mpv",
-      typeName: "Electric MPV",
-      desc: "รุ่น V ท็อปสุด",
-      image: "images/maxus9-v.jpg",
-      pdf: "pdfs/maxus9-v.pdf",
-      price: "1,799,000",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "Maxus 9 (Grey)",
-      trim: "V",
-      type: "mpv",
-      typeName: "Electric MPV",
-      desc: "รุ่น V สีเทา",
-      image: "images/maxus9-grey-v.jpg",
-      pdf: "pdfs/maxus9-grey-v.pdf",
-      price: "1,829,000",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "Maxus 7",
-      trim: "X",
-      type: "mpv",
-      typeName: "Electric MPV",
-      desc: "MPV ไฟฟ้าขนาดกลาง",
-      image: "images/maxus7-x.jpg",
-      pdf: "pdfs/maxus7-x.pdf",
-      price: "1,299,000",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "Maxus 7 (Grey/Black)",
-      trim: "X",
-      type: "mpv",
-      typeName: "Electric MPV",
-      desc: "รุ่น X สีเทา/ดำ",
-      image: "images/maxus7-x-gb.jpg",
-      pdf: "pdfs/maxus7-x-gb.pdf",
-      price: "1,319,000",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG IM6 Performance",
-      trim: "Performance",
-      type: "ev",
-      typeName: "Electric SUV Coupe",
-      desc: "SUV Coupe ไฟฟ้า สมรรถนะสูงสุด",
-      image: "images/mg-im6-performance.jpg",
-      pdf: "pdfs/mg-im6-performance.pdf",
-      price: "1,749,900",
-      specs: { drive: "AWD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG IM6 Premium",
-      trim: "Premium",
-      type: "ev",
-      typeName: "Electric SUV Coupe",
-      desc: "รุ่น Premium หรูหรา",
-      image: "images/mg-im6-premium.jpg",
-      pdf: "pdfs/mg-im6-premium.pdf",
-      price: "1,349,900",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG IM6 Premium",
-      trim: "Premium LR",
-      type: "ev",
-      typeName: "Electric SUV Coupe",
-      desc: "รุ่น Premium Long Range",
-      image: "images/mg-im6-premium-lr.jpg",
-      pdf: "pdfs/mg-im6-premium-lr.pdf",
-      price: "1,549,900",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG IM5",
-      trim: "Premium LR",
-      type: "ev",
-      typeName: "Electric Sedan",
-      desc: "ซีดานไฟฟ้าพรีเมียม",
-      image: "images/mg-im5.jpg",
-      pdf: "pdfs/mg-im5.pdf",
-      price: "1,499,900",
-      specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG URBAN",
-      trim: "STANDARD",
-      type: "ev",
-      typeName: "Electric City Car",
-      desc: "รถไฟฟ้าเมืองเล็ก คล่องตัว",
-      image: "images/mg-urban-standard.jpg",
-      pdf: "pdfs/mg-urban-standard.pdf",
-      price: "549,900",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG URBAN",
-      trim: "MAX",
-      type: "ev",
-      typeName: "Electric City Car",
-      desc: "รุ่น MAX ฟีเจอร์ครบ",
-      image: "images/mg-urban-max.jpg",
-      pdf: "pdfs/mg-urban-max.pdf",
-      price: "619,900",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
-    },
-    {
-      name: "MG URBAN",
-      trim: "ULTRA",
-      type: "ev",
-      typeName: "Electric City Car",
-      desc: "รุ่น ULTRA ท็อปสุด",
-      image: "images/mg-urban-ultra.jpg",
-      pdf: "pdfs/mg-urban-ultra.pdf",
-      price: "729,900",
-      specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
-    }
-  ];
+/* ============================================================
+   🔧 จุดแก้ไขหลัก: ใส่ลิงก์ PDF และ รูปภาพ ที่นี่ที่เดียว!
+   - ถ้ายังไม่มีลิงก์ ให้ใส่เป็น "" (ว่าง) → การ์ดจะขึ้น "รออัปเดต"
+   - รองรับลิงก์จาก GitHub, Google Drive, Dropbox หรือที่ใดๆ
+   - Google Drive ต้องใช้ลิงก์แบบ preview (ดูตัวอย่างด้านล่าง)
+   ============================================================ */
 
-  const carGrid = document.getElementById('carGrid');
-  const searchInput = document.getElementById('searchInput');
-  const filterTabs = document.querySelectorAll('.tab');
-  let currentFilter = 'all';
-  let currentSearch = '';
+const cars = [
+  // ===== MG3 Hybrid+ =====
+  {
+    name: "All New MG3 Hybrid+", trim: "D", type: "hybrid",
+    typeName: "Hybrid Hatchback", desc: "รถยนต์ Hybrid hatchback ประหยัดน้ำมัน",
+    image: "",  // 👈 ใส่ลิงก์รูปที่นี่ เช่น "images/mg3-hybrid-d.jpg"
+    pdf: "",    // 👈 ใส่ลิงก์ PDF ที่นี่ เช่น "pdfs/mg3-hybrid-d.pdf"
+    price: "579,900",
+    specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
+  },
+  {
+    name: "All New MG3 Hybrid+", trim: "X", type: "hybrid",
+    typeName: "Hybrid Hatchback", desc: "รุ่นท็อป พร้อมฟีเจอร์ครบ",
+    image: "", pdf: "",
+    price: "619,900",
+    specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
+  },
 
-  function renderCars() {
-    const filtered = cars.filter(car => {
-      const matchFilter = currentFilter === 'all' || car.type === currentFilter;
-      const matchSearch = car.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
-                          car.trim.toLowerCase().includes(currentSearch.toLowerCase()) ||
-                          car.desc.toLowerCase().includes(currentSearch.toLowerCase());
-      return matchFilter && matchSearch;
-    });
+  // ===== MG5 Pro =====
+  {
+    name: "MG5 Pro", trim: "D", type: "sedan",
+    typeName: "Sedan", desc: "ซีดานดีไซน์โฉบเฉี่ยว",
+    image: "", pdf: "",
+    price: "629,900",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+  },
+  {
+    name: "MG5 Pro", trim: "X", type: "sedan",
+    typeName: "Sedan", desc: "รุ่นท็อป พร้อมฟีเจอร์ครบครัน",
+    image: "", pdf: "",
+    price: "669,900",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+  },
 
-    if (filtered.length === 0) {
-      carGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#999;padding:60px;font-size:1.2rem;">ไม่พบรถที่ค้นหา</p>';
-      return;
-    }
+  // ===== NEW MG ZS =====
+  {
+    name: "NEW MG ZS", trim: "D", type: "suv",
+    typeName: "Compact SUV", desc: "SUV คอมแพ็ค ยอดนิยม",
+    image: "", pdf: "",
+    price: "599,000",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+  },
+  {
+    name: "NEW MG ZS", trim: "X (RED)", type: "suv",
+    typeName: "Compact SUV", desc: "รุ่น X สีแดงสปอร์ต",
+    image: "", pdf: "",
+    price: "649,000",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+  },
+  {
+    name: "NEW MG ZS", trim: "V", type: "suv",
+    typeName: "Compact SUV", desc: "รุ่น V รุ่นท็อป",
+    image: "", pdf: "",
+    price: "689,000",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
+  },
 
-    carGrid.innerHTML = filtered.map((car) => {
-      const hasImage = car.image && car.image !== '';
-      const imageHtml = hasImage 
-        ? `<div class="car-image has-image" style="background-image: url('${car.image}')">
-             <div class="image-hint">📸 ${car.image}</div>
-             <div class="car-badge">${car.typeName}</div>
-           </div>`
-        : `<div class="car-image">
-             <div class="image-placeholder">
-               <div class="image-placeholder-icon">🚗</div>
-               <div class="image-placeholder-text">รอรูปภาพ</div>
-             </div>
-             <div class="car-badge">${car.typeName}</div>
-           </div>`;
+  // ===== MG4 (MCE) =====
+  {
+    name: "MG4 (MCE)", trim: "D", type: "ev",
+    typeName: "Electric Hatchback", desc: "รถยนต์ไฟฟ้า 100% ดีไซน์สปอร์ต",
+    image: "", pdf: "",
+    price: "599,900",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "MG4 (MCE)", trim: "X LR", type: "ev",
+    typeName: "Electric Hatchback", desc: "รุ่น Long Range วิ่งไกล",
+    image: "", pdf: "",
+    price: "709,900",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
+  },
 
-      return `
-        <div class="car-card" onclick="openPDF('${car.pdf}', '${car.name} ${car.trim}')">
-          ${imageHtml}
-          <div class="car-info">
-            <div class="car-name">${car.name}</div>
-            <div class="car-trim">Trim: ${car.trim}</div>
-            <div class="car-desc">${car.desc}</div>
-            <div class="car-price">฿${car.price}</div>
-            <div class="car-specs">
-              <div class="spec"><strong>${car.specs.drive}</strong>ระบบขับเคลื่อน</div>
-              <div class="spec"><strong>${car.specs.warranty}</strong>ประกัน</div>
-              ${car.specs.battery ? `<div class="spec"><strong>${car.specs.battery}</strong>แบตเตอรี่</div>` : ''}
-            </div>
-            <button class="btn-view">📄 เปิดโบรชัวร์ PDF</button>
-          </div>
-        </div>
-      `;
-    }).join('');
+  // ===== MG S5 =====
+  {
+    name: "MG S5", trim: "D+", type: "ev",
+    typeName: "Electric SUV", desc: "SUVไฟฟ้า สุดคุ้ม",
+    image: "", pdf: "",
+    price: "649,900",
+    specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "MG S5", trim: "X+", type: "ev",
+    typeName: "Electric SUV", desc: "รุ่น X+ สุดHOT",
+    image: "", pdf: "",
+    price: "759,900",
+    specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "MG S5", trim: "V+", type: "ev",
+    typeName: "Electric SUV", desc: "รุ่น V+ ตัวท็อป",
+    image: "", pdf: "",
+    price: "849,900",
+    specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
+  },
+
+  // ===== Maxus 9 =====
+  {
+    name: "Maxus 9", trim: "X", type: "mpv",
+    typeName: "Electric MPV", desc: "รุ่น X ระดับพรีเมียม",
+    image: "", pdf: "",
+    price: "1,599,000",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "Maxus 9", trim: "V", type: "mpv",
+    typeName: "Electric MPV", desc: "รุ่น V ท็อปสุด",
+    image: "", pdf: "",
+    price: "1,799,000",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "Maxus 9 (Grey)", trim: "V", type: "mpv",
+    typeName: "Electric MPV", desc: "รุ่น V สีเทา",
+    image: "", pdf: "",
+    price: "1,829,000",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+
+  // ===== Maxus 7 =====
+  {
+    name: "Maxus 7", trim: "X", type: "mpv",
+    typeName: "Electric MPV", desc: "MPV ไฟฟ้าขนาดกลาง",
+    image: "", pdf: "",
+    price: "1,299,000",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "Maxus 7 (Grey/Black)", trim: "X", type: "mpv",
+    typeName: "Electric MPV", desc: "รุ่น X สีเทา/ดำ",
+    image: "", pdf: "",
+    price: "1,319,000",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+
+  // ===== MG IM6 =====
+  {
+    name: "MG IM6 Performance", trim: "Performance", type: "ev",
+    typeName: "Electric SUV Coupe", desc: "SUV Coupe ไฟฟ้า สมรรถนะสูงสุด",
+    image: "", pdf: "",
+    price: "1,749,900",
+    specs: { drive: "AWD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "MG IM6 Premium", trim: "Premium", type: "ev",
+    typeName: "Electric SUV Coupe", desc: "รุ่น Premium หรูหรา",
+    image: "", pdf: "",
+    price: "1,349,900",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "MG IM6 Premium", trim: "Premium LR", type: "ev",
+    typeName: "Electric SUV Coupe", desc: "รุ่น Premium Long Range",
+    image: "", pdf: "",
+    price: "1,549,900",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+
+  // ===== MG IM5 =====
+  {
+    name: "MG IM5", trim: "Premium LR", type: "ev",
+    typeName: "Electric Sedan", desc: "ซีดานไฟฟ้าพรีเมียม",
+    image: "", pdf: "",
+    price: "1,499,900",
+    specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
+  },
+
+  // ===== MG URBAN =====
+  {
+    name: "MG URBAN", trim: "STANDARD", type: "ev",
+    typeName: "Electric City Car", desc: "รถไฟฟ้าเมืองเล็ก คล่องตัว",
+    image: "", pdf: "",
+    price: "549,900",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "MG URBAN", trim: "MAX", type: "ev",
+    typeName: "Electric City Car", desc: "รุ่น MAX ฟีเจอร์ครบ",
+    image: "", pdf: "",
+    price: "619,900",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
+  },
+  {
+    name: "MG URBAN", trim: "ULTRA", type: "ev",
+    typeName: "Electric City Car", desc: "รุ่น ULTRA ท็อปสุด",
+    image: "", pdf: "",
+    price: "729,900",
+    specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
+  }
+];
+
+/* ============================================================
+   ⚙️ ส่วนทำงานอัตโนมัติ (ไม่ต้องแก้)
+   ============================================================ */
+const carGrid = document.getElementById('carGrid');
+const searchInput = document.getElementById('searchInput');
+const filterTabs = document.querySelectorAll('.tab');
+let currentFilter = 'all';
+let currentSearch = '';
+
+function renderCars() {
+  const filtered = cars.filter(car => {
+    const matchFilter = currentFilter === 'all' || car.type === currentFilter;
+    const matchSearch = car.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                        car.trim.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                        car.desc.toLowerCase().includes(currentSearch.toLowerCase());
+    return matchFilter && matchSearch;
+  });
+
+  if (filtered.length === 0) {
+    carGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#999;padding:60px;font-size:1.2rem;">ไม่พบรถที่ค้นหา</p>';
+    return;
   }
 
-  searchInput.addEventListener('input', (e) => {
-    currentSearch = e.target.value;
+  carGrid.innerHTML = filtered.map((car) => {
+    const hasImage = car.image && car.image.trim() !== '';
+    const hasPdf = car.pdf && car.pdf.trim() !== '';
+
+    const imageHtml = hasImage
+      ? `<div class="car-image" style="background-image: url('${car.image}')">
+           <div class="status-badge status-ready">✅ พร้อม</div>
+           <div class="car-badge">${car.typeName}</div>
+         </div>`
+      : `<div class="car-image">
+           <div class="image-placeholder">
+             <div class="image-placeholder-icon">🚗</div>
+             <div class="image-placeholder-text">รอรูปภาพ</div>
+           </div>
+           <div class="status-badge ${hasPdf ? 'status-ready' : 'status-pending'}">${hasPdf ? '✅ PDF พร้อม' : '⏳ รออัปเดต'}</div>
+           <div class="car-badge">${car.typeName}</div>
+         </div>`;
+
+    const btnHtml = hasPdf
+      ? `<button class="btn-view">📄 เปิดโบรชัวร์ PDF</button>`
+      : `<button class="btn-view disabled" onclick="event.stopPropagation(); alert('⏳ โบรชัวร์รุ่นนี้กำลังเตรียมการ กรุณากลับมาใหม่นะคะ');">⏳ รออัปเดตโบรชัวร์</button>`;
+
+    const clickAction = hasPdf
+      ? `onclick="openPDF('${car.pdf}', '${car.name} ${car.trim}')"`
+      : `onclick="alert('⏳ โบรชัวร์รุ่นนี้กำลังเตรียมการ กรุณากลับมาใหม่นะคะ')"`;
+
+    return `
+      <div class="car-card" ${clickAction}>
+        ${imageHtml}
+        <div class="car-info">
+          <div class="car-name">${car.name}</div>
+          <div class="car-trim">Trim: ${car.trim}</div>
+          <div class="car-desc">${car.desc}</div>
+          <div class="car-price">฿${car.price}</div>
+          <div class="car-specs">
+            <div class="spec"><strong>${car.specs.drive}</strong>ระบบขับเคลื่อน</div>
+            <div class="spec"><strong>${car.specs.warranty}</strong>ประกัน</div>
+            ${car.specs.battery ? `<div class="spec"><strong>${car.specs.battery}</strong>แบตเตอรี่</div>` : ''}
+          </div>
+          ${btnHtml}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+searchInput.addEventListener('input', (e) => {
+  currentSearch = e.target.value;
+  renderCars();
+});
+
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentFilter = tab.dataset.filter;
     renderCars();
   });
+});
 
-  filterTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      currentFilter = tab.dataset.filter;
-      renderCars();
-    });
-  });
+const modal = document.getElementById('pdfModal');
+const pdfFrame = document.getElementById('pdfFrame');
+const modalTitle = document.getElementById('modalTitle');
+let currentPdf = '';
 
-  const modal = document.getElementById('pdfModal');
-  const pdfFrame = document.getElementById('pdfFrame');
-  const modalTitle = document.getElementById('modalTitle');
-  let currentPdf = '';
-
-  function openPDF(pdfUrl, title) {
-    currentPdf = pdfUrl;
-    modalTitle.textContent = `โบรชัวร์ ${title}`;
-    pdfFrame.src = pdfUrl + '#toolbar=1&navpanes=1&scrollbar=1';
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+function openPDF(pdfUrl, title) {
+  currentPdf = pdfUrl;
+  modalTitle.textContent = `โบรชัวร์ ${title}`;
+  // ถ้าเป็น Google Drive link แบบธรรมดา → แปลงเป็น preview อัตโนมัติ
+  let finalUrl = pdfUrl;
+  const driveMatch = pdfUrl.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (driveMatch && !pdfUrl.includes('preview')) {
+    finalUrl = `https://drive.google.com/file/d/${driveMatch[1]}/preview`;
   }
+  pdfFrame.src = finalUrl;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
 
-  function closePDF() {
-    modal.classList.remove('active');
-    pdfFrame.src = '';
-    document.body.style.overflow = '';
-  }
+function closePDF() {
+  modal.classList.remove('active');
+  pdfFrame.src = '';
+  document.body.style.overflow = '';
+}
 
-  document.getElementById('closeBtn').addEventListener('click', closePDF);
-  document.getElementById('downloadBtn').addEventListener('click', () => {
-    const a = document.createElement('a');
-    a.href = currentPdf;
-    a.download = currentPdf.split('/').pop();
-    a.click();
-  });
-  document.getElementById('openNewBtn').addEventListener('click', () => {
-    window.open(currentPdf, '_blank');
-  });
+document.getElementById('closeBtn').addEventListener('click', closePDF);
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  window.open(currentPdf, '_blank');
+});
+document.getElementById('openNewBtn').addEventListener('click', () => {
+  window.open(currentPdf, '_blank');
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closePDF();
+});
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closePDF();
-  });
-
-  renderCars();
+renderCars();
 </script>
 
 </body>
