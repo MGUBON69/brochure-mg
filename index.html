@@ -4,10 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MG Catalog | M2 Motorsport Evolution</title>
+
+<!-- เพิ่ม: โหลดฟอนต์ Prompt จาก Google Fonts ให้ตรงกับโค้ดแรก -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Segoe UI', 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* แก้ไข: เปลี่ยนให้ Prompt เป็นฟอนต์หลัก */
+    font-family: 'Prompt', sans-serif;
     background: #f8f9fa;
     color: #1a1a1a;
     line-height: 1.6;
@@ -36,6 +43,7 @@
   .search-box {
     padding: 12px 25px; border: 2px solid #e0e0e0; border-radius: 30px;
     background: #f8f9fa; color: #1a1a1a; font-size: 1rem; width: 350px; transition: all 0.3s;
+    font-family: 'Prompt', sans-serif; /* เพิ่มให้ช่องค้นหาใช้ฟอนต์ Prompt ด้วย */
   }
   .search-box::placeholder { color: #999; }
   .search-box:focus { outline: none; border-color: #0066cc; background: #fff; box-shadow: 0 0 0 4px rgba(0,102,204,0.1); }
@@ -62,7 +70,7 @@
   .tab {
     padding: 12px 28px; background: #fff; border: 2px solid #e0e0e0;
     border-radius: 30px; color: #666; cursor: pointer; transition: all 0.3s;
-    font-size: 0.95rem; font-weight: 500;
+    font-size: 0.95rem; font-weight: 500; font-family: 'Prompt', sans-serif;
   }
   .tab:hover { border-color: #0066cc; color: #0066cc; background: #f0f7ff; }
   .tab.active { background: #0066cc; border-color: #0066cc; color: #fff; box-shadow: 0 4px 12px rgba(0,102,204,0.3); }
@@ -123,6 +131,7 @@
     border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer;
     transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;
     box-shadow: 0 4px 12px rgba(0,102,204,0.25);
+    font-family: 'Prompt', sans-serif;
   }
   .btn-view:hover { background: #0052a3; transform: translateY(-2px); }
   .btn-view.disabled { background: #ccc; cursor: not-allowed; box-shadow: none; }
@@ -144,6 +153,7 @@
   .modal-btn {
     padding: 10px 20px; background: #f0f0f0; color: #1a1a1a; border: none;
     border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
+    font-family: 'Prompt', sans-serif;
   }
   .modal-btn:hover { background: #0066cc; color: #fff; }
   .modal-btn.close { background: #ff4444; color: #fff; }
@@ -174,8 +184,9 @@
   <div class="header-content">
     <div class="logo-container">
       <div class="logo-box">
+        <!-- แก้ไข: เปลี่ยน font-family ใน SVG เป็น Prompt -->
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90"
+          <text x="100" y="135" font-family="'Prompt', sans-serif" font-size="90"
                 font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
         </svg>
       </div>
@@ -190,8 +201,9 @@
 
 <section class="hero">
   <div class="hero-logo">
+    <!-- แก้ไข: เปลี่ยน font-family ใน SVG เป็น Prompt -->
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <text x="100" y="135" font-family="Arial Black, sans-serif" font-size="90"
+      <text x="100" y="135" font-family="'Prompt', sans-serif" font-size="90"
             font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
     </svg>
   </div>
@@ -432,9 +444,6 @@ function closePDF() {
 
 document.getElementById('closeBtn').addEventListener('click', closePDF);
 document.getElementById('downloadBtn').addEventListener('click', () => {
-  window.open(currentPdf, '_blank');
-});
-document.getElementById('openNewBtn').addEventListener('click', () => {
   window.open(currentPdf, '_blank');
 });
 document.addEventListener('keydown', (e) => {
