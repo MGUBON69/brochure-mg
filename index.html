@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MG Catalog | M2 Motorsport Evolution</title>
 
-<!-- เพิ่ม: โหลดฟอนต์ Prompt จาก Google Fonts ให้ตรงกับโค้ดแรก -->
+<!-- โหลดฟอนต์ Prompt จาก Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -13,7 +13,6 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    /* แก้ไข: เปลี่ยนให้ Prompt เป็นฟอนต์หลัก */
     font-family: 'Prompt', sans-serif;
     background: #f8f9fa;
     color: #1a1a1a;
@@ -43,7 +42,7 @@
   .search-box {
     padding: 12px 25px; border: 2px solid #e0e0e0; border-radius: 30px;
     background: #f8f9fa; color: #1a1a1a; font-size: 1rem; width: 350px; transition: all 0.3s;
-    font-family: 'Prompt', sans-serif; /* เพิ่มให้ช่องค้นหาใช้ฟอนต์ Prompt ด้วย */
+    font-family: 'Prompt', sans-serif;
   }
   .search-box::placeholder { color: #999; }
   .search-box:focus { outline: none; border-color: #0066cc; background: #fff; box-shadow: 0 0 0 4px rgba(0,102,204,0.1); }
@@ -77,19 +76,22 @@
 
   .car-grid {
     max-width: 1400px; margin: 30px auto 60px; padding: 0 20px;
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 25px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px;
   }
   .car-card {
     background: #fff; border: 1px solid #e8e8e8; border-radius: 16px;
     overflow: hidden; transition: all 0.3s; cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex; flex-direction: column; /* แก้ไข: จัดเรียงแนวตั้ง */
   }
   .car-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); border-color: #0066cc; }
+  
   .car-image {
     height: 220px;
     background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
     position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;
     background-size: cover; background-position: center;
+    flex-shrink: 0; /* ป้องกันรูปหด */
   }
   .car-image::after {
     content: ''; position: absolute; inset: 0;
@@ -114,11 +116,28 @@
   .status-ready { background: #22c55e; color: #fff; }
   .status-pending { background: #f59e0b; color: #fff; }
 
-  .car-info { padding: 22px; }
-  .car-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; color: #1a1a1a; }
+  .car-info { 
+    padding: 20px; 
+    flex: 1; /* ดันเนื้อหาให้เต็มพื้นที่ที่เหลือ */
+    display: flex;
+    flex-direction: column;
+  }
+  .car-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 5px; color: #1a1a1a; line-height: 1.3; }
   .car-trim { color: #0066cc; font-size: 0.9rem; margin-bottom: 10px; font-weight: 600; }
   .car-desc { color: #666; font-size: 0.9rem; margin-bottom: 15px; min-height: 42px; }
-  .car-price { font-size: 1.8rem; font-weight: 800; color: #0066cc; margin-bottom: 15px; }
+  
+  /* --- ส่วนที่แก้ไขเรื่องราคา --- */
+  .car-price { 
+    font-size: 1.5rem; /* ลดขนาดลงจาก 1.8rem */
+    font-weight: 800; 
+    color: #0066cc; 
+    margin-bottom: 15px; 
+    line-height: 1.2;
+    word-break: break-word; /* ตัดคำเมื่อยาวเกิน */
+    white-space: normal;   /* อนุญาตให้ขึ้นบรรทัดใหม่ */
+  }
+  /* --------------------------- */
+
   .car-specs {
     display: flex; gap: 15px; padding: 15px 0;
     border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0;
@@ -126,12 +145,14 @@
   }
   .spec { font-size: 0.85rem; color: #666; }
   .spec strong { display: block; color: #1a1a1a; font-size: 1.05rem; margin-bottom: 3px; }
+  
   .btn-view {
-    width: 100%; padding: 14px; background: #0066cc; color: #fff; border: none;
+    width: 100%; padding: 12px; background: #0066cc; color: #fff; border: none;
     border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer;
     transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;
     box-shadow: 0 4px 12px rgba(0,102,204,0.25);
     font-family: 'Prompt', sans-serif;
+    margin-top: auto; /* ดันปุ่มไปล่างสุดเสมอ */
   }
   .btn-view:hover { background: #0052a3; transform: translateY(-2px); }
   .btn-view.disabled { background: #ccc; cursor: not-allowed; box-shadow: none; }
@@ -184,7 +205,6 @@
   <div class="header-content">
     <div class="logo-container">
       <div class="logo-box">
-        <!-- แก้ไข: เปลี่ยน font-family ใน SVG เป็น Prompt -->
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <text x="100" y="135" font-family="'Prompt', sans-serif" font-size="90"
                 font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
@@ -201,7 +221,6 @@
 
 <section class="hero">
   <div class="hero-logo">
-    <!-- แก้ไข: เปลี่ยน font-family ใน SVG เป็น Prompt -->
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <text x="100" y="135" font-family="'Prompt', sans-serif" font-size="90"
             font-weight="900" text-anchor="middle" fill="#ffffff">MG</text>
@@ -243,49 +262,42 @@
 </footer>
 
 <script>
-/* ============================================================
-   🔧 จุดแก้ไขหลัก: ใส่ลิงก์ PDF และ รูปภาพ ที่นี่ที่เดียว!
-   - ถ้ายังไม่มีลิงก์ ให้ใส่เป็น "" (ว่าง) → การ์ดจะขึ้น "รออัปเดต"
-   - รองรับลิงก์จาก GitHub, Google Drive, Dropbox หรือที่ใดๆ
-   - Google Drive ต้องใช้ลิงก์แบบ preview (ดูตัวอย่างด้านล่าง)
-   ============================================================ */
-
 const cars = [
   // ===== MG3 Hybrid+ =====
   {
     name: "All New MG3 Hybrid+", trim: "D/X", type: "hybrid",
     typeName: "Hybrid Hatchback", desc: "รถยนต์ Hybrid hatchback ประหยัดน้ำมัน 194แรงม้า",
-    image: "mg3-hybrid-d_compressed-1.jpg",  // 👈 ใส่ลิงก์รูปที่นี่ เช่น "images/mg3-hybrid-d.jpg"
-    pdf: "https://drive.google.com/file/d/1jjJJ0JmNrkgIC2_u3nf5UtSxmYVllHwv/view?usp=sharing",    // 👈 ใส่ลิงก์ PDF ที่นี่ เช่น "pdfs/mg3-hybrid-d.pdf"
-    price: "579,900/619,900",
+    image: "mg3-hybrid-d_compressed-1.jpg",  
+    pdf: "https://drive.google.com/file/d/1jjJJ0JmNrkgIC2_u3nf5UtSxmYVllHwv/view?usp=sharing",    
+    price: "579,900 / 619,900", // ใส่ช่องว่างช่วยให้ดูง่ายขึ้น
     specs: { drive: "2WD", warranty: "6 ปี / 140,000 กม." }
   },
   {
     name: "MG5 Pro", trim: "D/X", type: "sedan",
     typeName: "Sedan", desc: "ซีดานดีไซน์โฉบเฉี่ยว พร้อมระบบเชื่อมต่อมือถือ",
     image: "mg5-pro-d_compressed-1.jpg", pdf: "https://drive.google.com/file/d/1bi526rM7tnzspxAf8KMEe4c2na2zgxKK/view?usp=sharing",
-    price: "629,900/669,900",
+    price: "629,900 / 669,900",
     specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
   },
   {
     name: "NEW MG ZS", trim: "D/X/V", type: "suv",
     typeName: "Compact SUV", desc: "SUV ราคารถเก๋ง ยอดนิยม",
     image: "mg-zs-d_compressed-1.jpg", pdf: "https://drive.google.com/file/d/1dqRl5UtNVBDuJeMCUbrhm5FEqOx4pgg7/view?usp=sharing",
-    price: "599,000/649,000/689,000",
+    price: "599,000 / 649,000 / 689,000",
     specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม." }
   },
   {
     name: "MG4 (MCE)", trim: "D/X", type: "ev",
     typeName: "Electric Hatchback", desc: "รถยนต์ไฟฟ้า 100% ดีไซน์สปอร์ต วิ่งไกล 540กม.",
     image: "mg4-d_compressed-1.jpg", pdf: "https://drive.google.com/file/d/19WC_wdu9-Wrx87PmNz0Fo4ZSWZVTfZSh/view?usp=sharing",
-    price: "599,900/709,900",
+    price: "599,900 / 709,900",
     specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
   },
   {
     name: "MG S5", trim: "D+/X+/V+", type: "ev",
     typeName: "Electric SUV", desc: "SUVไฟฟ้า สุดคุ้ม 245แรงม้า",
     image: "mgs5-d_compressed-1.jpg", pdf: "https://drive.google.com/file/d/1D9iAxIi_mmEtrdwBkyDKuEeA8H4ZAVvl/view?usp=sharing",
-    price: "649,900/759,900/849,900",
+    price: "649,900 / 759,900 / 849,900",
     specs: { drive: "2WD", warranty: "5 ปี / 140,000 กม.", battery: "Life time" }
   },
   {
@@ -313,7 +325,7 @@ const cars = [
        name: "MG IM6", trim: "Premium/LR", type: "ev",
     typeName: "Electric SUV Coupe", desc: "SUV Coupe ไฟฟ้า วิ่งไกล",
     image: "im6_compressed-9.jpg", pdf: "https://drive.google.com/file/d/1Rat8wXqt9OZ0id0tNylAhvVB1pJCrJSt/view?usp=sharing",
-    price: "1,349,900/1,549,900",
+    price: "1,349,900 / 1,549,900",
     specs: { drive: "AWD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
   },
   {
@@ -323,19 +335,17 @@ const cars = [
     price: "1,499,900",
     specs: { drive: "2WD", warranty: "5 ปี / 160,000 กม.", battery: "Life time" }
   },
-
-  // ===== MG URBAN =====
   {
-    name: "MG URBAN", trim: "STANDARD/MAX/ULTRA", type: "ev",
+    name: "MG URBAN", trim: "STD/MAX/ULTRA", type: "ev",
     typeName: "Electric City Car", desc: "เอาใจคนเมือง",
     image: "mg-urban-max_compressed-1.jpg", pdf: "https://drive.google.com/file/d/1tpLXfEjwsnXHb3VjeEgC8P4PAZuDZc_3/view?usp=sharing",
-    price: "549,900/619,900/729,900",
+    price: "549,900 / 619,900 / 729,900",
     specs: { drive: "2WD", warranty: "4 ปี / 120,000 กม.", battery: "Life time" }
   }
 ];
 
 /* ============================================================
-   ⚙️ ส่วนทำงานอัตโนมัติ (ไม่ต้องแก้)
+   ⚙️ ส่วนทำงานอัตโนมัติ
    ============================================================ */
 const carGrid = document.getElementById('carGrid');
 const searchInput = document.getElementById('searchInput');
@@ -425,7 +435,6 @@ let currentPdf = '';
 function openPDF(pdfUrl, title) {
   currentPdf = pdfUrl;
   modalTitle.textContent = `โบรชัวร์ ${title}`;
-  // ถ้าเป็น Google Drive link แบบธรรมดา → แปลงเป็น preview อัตโนมัติ
   let finalUrl = pdfUrl;
   const driveMatch = pdfUrl.match(/\/d\/([a-zA-Z0-9_-]+)/);
   if (driveMatch && !pdfUrl.includes('preview')) {
